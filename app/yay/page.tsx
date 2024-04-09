@@ -2,6 +2,7 @@ import Image from "next/image"
 import hug2 from "../../public/kitty/hug2.gif"
 import thank from "../../public/ty.gif"
 import cutie from "../../public/cutie.gif"
+import dance from "../../public/kitty/dance.gif"
 
 export default function yay () {
     return (
@@ -11,7 +12,10 @@ export default function yay () {
                 <Image src={cutie} alt="cutie patootie" className="size-24 "/>
             </div>
             <Image src={hug2} alt="My Cutie Pies"/>
-            
+            <button className="bg-gray-500 rounded-lg w-28">
+                <span>Let&apos;s go back</span>
+                <Image src={dance} alt="Cute button" className="size-20"/>
+            </button>
         </div>
     )
 }
