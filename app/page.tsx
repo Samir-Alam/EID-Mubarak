@@ -35,10 +35,10 @@ export default function Home() {
   
   return (
     <div className="flex items-center flex-col max-h-full py-10 overflow-hidden">
-      <div className="font-bold font-sans text-center "><Image className="size-48 bg-transparent" priority src={eidMubarak} alt="cute kitty"/></div>
+      <div className="font-bold font-sans text-center "><Image className="size-48 lg:size-40 bg-transparent" priority src={eidMubarak} alt="cute kitty"/></div>
 
       <div className="flex flex-col gap-8">
-        <Image className="size-48 bg-transparent mt-4" src={kitty} alt="cute kitty"/>
+        <Image className="size-48 lg:size-40 bg-transparent mt-4" src={kitty} alt="cute kitty"/>
         <span className={`${comic_neue.className} text-xl`}>WILL YOU GIVE ME EIDI ?</span>  
       </div>
 
