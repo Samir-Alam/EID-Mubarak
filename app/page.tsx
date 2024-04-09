@@ -18,6 +18,8 @@ export default function Home() {
   const [yesButtonHeight, setYesButtonHeight] = useState(75);
   const [yesButtonWidth, setYesButtonWidth] = useState(150);
   
+  const pls = [{word: "pls", img: kitty}];
+
   const router = useRouter()
 
   const handleClick = () => {
