@@ -22,7 +22,7 @@ export default function Home() {
 
   const handleClick = () => {
     setCount(count+1);
-    if (count === 4) {
+    if (count === 3) {
       router.push("/rudie");
     }
     setButtonHeight(buttonHeight + 10);
