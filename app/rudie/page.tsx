@@ -3,6 +3,7 @@
 import Image from "next/image"
 import rude from "../../public/kitty/rude.gif"
 import angry from "../../public/kitty/angry.gif"
+import bad from "../../public/kitty/bad.gif"
 import { comic_neue } from "../fonts"
 import { useRouter } from "next/navigation"
 
@@ -12,9 +13,10 @@ export default function rudie() {
     const router = useRouter();
     
     return (
-        <div className="flex flex-col gap-3 items-center mt-16">
-            <Image src={rude} alt="" className="size-2/3"/>
-            <button className="bg-gray-500 rounded-lg w-36 flex mt-48" onClick={() => router.push("/")}>
+        <div className="flex flex-col gap-6 items-center mt-24">
+            <Image src={rude} alt="rudie" className="size-2/3"/>
+            <Image src={bad} alt="bad bad" className="size-1/3 mt-24"/>
+            <button className="bg-gray-500 rounded-lg w-36 flex mt-4" onClick={() => router.push("/")}>
                 <span className={`${comic_neue.className} text-xl text-white`}>
                     Say yes SILLY
                 </span>
