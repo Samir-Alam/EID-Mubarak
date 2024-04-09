@@ -19,8 +19,8 @@ export default function yay () {
                 <Image src={thank} alt="thank you" className="size-36"/>
                 <Image src={cutie} alt="cutie patootie" className="size-24 "/>
             </div>
-            <Image src={hug2} alt="My Cutie Pies" className="size-1/2 lg:size-1/6"/>
-            <button className="bg-gray-500 rounded-lg w-36 flex mt-48 lg:mt-36" onClick={() => router.push("/")}>
+            <Image src={hug2} alt="My Cutie Pies" className="size-3/4 lg:size-1/6"/>
+            <button className="bg-gray-500 rounded-lg w-36 flex mt-32 lg:mt-36" onClick={() => router.push("/")}>
                 <span className={`${comic_neue.className} text-xl text-white`}>
                     Let&apos;s go back
                 </span>
