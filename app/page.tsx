@@ -22,8 +22,8 @@ export default function Home() {
 
   const handleClick = () => {
     setCount(count+1);
-    if(count === 5){
-      
+    if (count === 4) {
+      router.push("/rudie");
     }
     setButtonHeight(buttonHeight + 10);
     setButtonWidth(buttonWidth + 20);
@@ -31,10 +31,6 @@ export default function Home() {
     setYesButtonWidth(yesButtonWidth - 20)
     console.log(count);
     
-  }
-
-  const thankyou = () => {
-
   }
   
   return (
