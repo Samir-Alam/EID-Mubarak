@@ -22,7 +22,7 @@ export default function Home() {
   const [yesButtonWidth, setYesButtonWidth] = useState(150);
   
   const pls = [
-    {word: "", img: kitty}, 
+    {word: "NO", img: kitty}, 
     {word: "PLS", img: pws}, 
     {word: "PWSSS...", img:cry},
     {word: "PWSSSSS...", img:cry2},
@@ -37,10 +37,10 @@ export default function Home() {
     if (count === 3) {
       router.push("/rudie");
     }
-    setButtonHeight(buttonHeight + 10);
-    setButtonWidth(buttonWidth + 20);
-    setYesButtonHeight(yesButtonHeight - 10);
-    setYesButtonWidth(yesButtonWidth - 20)
+    setButtonHeight(buttonHeight - 7.5);
+    setButtonWidth(buttonWidth - 15);
+    setYesButtonHeight(yesButtonHeight + 7.5);
+    setYesButtonWidth(yesButtonWidth + 15)
     console.log(count);
     
   }
@@ -56,7 +56,7 @@ export default function Home() {
           {/* <span>{pls[count].word}</span> */}
           <Image className="size-48 lg:size-40 bg-transparent mt-4" src={pls[count].img} alt="cute kitty"/>
         </div>
-        <span className={`${comic_neue.className} text-xl`}>WILL YOU GIVE ME EIDI ? <br/> {pls[count].word}</span>  
+        <span className={`${comic_neue.className} text-xl`}>WILL YOU GIVE ME EIDI ?</span>  
       </div>
 
 
@@ -64,7 +64,7 @@ export default function Home() {
         <div>
 
         <button className="bg-green-600 py-2 rounded-lg text-center flex flex-col items-center h-auto" onClick={() => {router.push('/yay');}} style={{ width: `${yesButtonWidth}px`, height: `${yesButtonHeight}`}}>
-          <span className={`${comic_neue.className} text-xl text-white`}>
+          <span className={`${comic_neue.className} text-xl text-white min-h-min min-w-min`}>
             YES
           </span>
             <Image className="size-auto bg-transparent" src={moneyKitty} alt="cute kitty"/>
@@ -74,8 +74,8 @@ export default function Home() {
         <div>
 
         <button className="bg-red-600 py-2 w-[100px] rounded-lg flex flex-col items-center" onClick={handleClick} style={{ width: `${buttonWidth}px`, height: `${buttonHeight}`}}>
-          <span className={`${comic_neue.className} text-xl text-white`}>
-            NO
+          <span className={`${comic_neue.className} text-xl text-white flex`}>
+            {pls[count].word}
           </span>
           <Image className="size-full bg-transparent" src={noKitty} alt="cute kitty"/>
         </button>
