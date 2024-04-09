@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import kitty from "../public/kitty/pwssss.gif"
+import cry from "../public/kitty/cry.gif"
+import cry2 from "../public/kitty/cry2.gif"
+import pws from "../public/kitty/pws.gif"
 import moneyKitty from "../public/kitty/moneyKitty.gif"
 import noKitty from "../public/kitty/no.gif"
 import eidMubarak from '../public/eid-mubarak.gif'
@@ -18,7 +21,14 @@ export default function Home() {
   const [yesButtonHeight, setYesButtonHeight] = useState(75);
   const [yesButtonWidth, setYesButtonWidth] = useState(150);
   
-  const pls = [{word: "pls", img: kitty}];
+  const pls = [
+    {word: "", img: kitty}, 
+    {word: "PLS", img: pws}, 
+    {word: "PWSSS...", img:cry},
+    {word: "PWSSSSS...", img:cry2},
+    {word: "PWSSSSSSS...", img:cry2},
+    {word: "PWSSSSSSS...", img:cry2}
+  ];
 
   const router = useRouter()
 
@@ -36,12 +46,17 @@ export default function Home() {
   }
   
   return (
-    <div className="flex items-center flex-col max-h-full py-10 overflow-hidden">
-      <div className="font-bold font-sans text-center "><Image className="size-48 lg:size-40 bg-transparent" priority src={eidMubarak} alt="cute kitty"/></div>
+    <div className="flex items-center flex-col max-h-full py-6 overflow-hidden">
+      <div className="font-bold font-sans text-center ">
+        <Image className="size-48 lg:size-40 bg-transparent" priority src={eidMubarak} alt="cute kitty"/>
+      </div>
 
       <div className="flex flex-col gap-8">
-        <Image className="size-48 lg:size-40 bg-transparent mt-4" src={kitty} alt="cute kitty"/>
-        <span className={`${comic_neue.className} text-xl`}>WILL YOU GIVE ME EIDI ?</span>  
+        <div>
+          {/* <span>{pls[count].word}</span> */}
+          <Image className="size-48 lg:size-40 bg-transparent mt-4" src={pls[count].img} alt="cute kitty"/>
+        </div>
+        <span className={`${comic_neue.className} text-xl`}>WILL YOU GIVE ME EIDI ? <br/> {pls[count].word}</span>  
       </div>
 
 
