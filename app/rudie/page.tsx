@@ -3,6 +3,7 @@
 import Image from "next/image"
 import rude from "../../public/kitty/rude.gif"
 import angry from "../../public/kitty/angry.gif"
+import love from "../../public/kitty/love.gif"
 import bad from "../../public/kitty/bad.gif"
 import { comic_neue } from "../fonts"
 import { useRouter } from "next/navigation"
@@ -22,6 +23,16 @@ export default function rudie() {
                 </span>
                 <Image src={angry} alt="Cute button" className="size-20"/>
             </button>
+
+        <div className="flex flex-row gap-1 align-middle items-center mt-6">
+            <span className={`${comic_neue.className} text-lg`}>
+                MADE WITH LOVE 💖
+            </span>
+            <Image src={love} alt="love" className="size-8"/> 
+            <span className={`${comic_neue.className} text-lg`}>
+                BY SAMIR
+            </span>
+        </div>
         </div>
     )
 }
