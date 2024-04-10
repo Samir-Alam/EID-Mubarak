@@ -9,6 +9,7 @@ import moneyKitty from "../public/kitty/moneyKitty.gif"
 import love from "../public/kitty/love.gif"
 import noKitty from "../public/kitty/no.gif"
 import eidMubarak from '../public/eid-mubarak.gif'
+import X from "../public/X.jpg"
 import { useState } from "react";
 import { comic_neue } from "./fonts";
 import { useRouter } from "next/navigation";
@@ -47,8 +48,11 @@ export default function Home() {
   }
   
   return (
-    <div className="flex items-center flex-col max-h-full py-6 overflow-hidden">
-      
+    <div className="flex items-center flex-col max-h-full py-4 overflow-hidden">
+      <a href="https://twitter.com/Samiralam00" className="bg-black rounded-xl right-4 absolute flex align-middle items-center gap-1 pr-2">
+        <Image src={X} alt="X" className="size-6 rounded-full invert "/>
+        <span className={`${comic_neue.className} text-sm text-white`}>FOLLOW ME</span>
+      </a>
       <div className="font-bold font-sans text-center ">
         <Image className="size-40 lg:size-40 bg-transparent" priority src={eidMubarak} alt="cute kitty" unoptimized/>
       </div>
