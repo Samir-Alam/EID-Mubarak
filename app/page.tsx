@@ -51,7 +51,7 @@ export default function Home() {
     <div className="flex items-center flex-col max-h-full py-4 overflow-hidden">
       <a href="https://twitter.com/Samiralam00" className="bg-black rounded-xl right-4 absolute flex align-middle items-center gap-1 pr-2">
         <Image src={X} alt="X" className="size-6 rounded-full invert "/>
-        <span className={`${comic_neue.className} text-sm text-white`}>FOLLOW ME</span>
+        <span className={`${comic_neue.className} text-xs text-white text-center`}>FOLLOW {window.screen.width < 700 && <br/>} ME</span>
       </a>
       <div className="font-bold font-sans text-center ">
         <Image className="size-40 lg:size-40 bg-transparent" priority src={eidMubarak} alt="cute kitty" unoptimized/>
