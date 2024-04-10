@@ -50,13 +50,13 @@ export default function Home() {
     <div className="flex items-center flex-col max-h-full py-6 overflow-hidden">
       
       <div className="font-bold font-sans text-center ">
-        <Image className="size-40 lg:size-40 bg-transparent" priority src={eidMubarak} alt="cute kitty"/>
+        <Image className="size-40 lg:size-40 bg-transparent" priority src={eidMubarak} alt="cute kitty" unoptimized/>
       </div>
 
       <div className="flex flex-col gap-8">
         <div>
           {/* <span>{pls[count].word}</span> */}
-          <Image className="size-44 lg:size-40 bg-transparent mt-4" src={pls[count].img} alt="cute kitty"/>
+          <Image className="size-44 lg:size-40 bg-transparent mt-4" src={pls[count].img} alt="cute kitty" unoptimized/>
         </div>
         <span className={`${comic_neue.className} text-xl`}>WILL YOU GIVE ME EIDI ?</span>  
       </div>
@@ -69,7 +69,7 @@ export default function Home() {
           <span className={`${comic_neue.className} text-xl text-white min-h-min min-w-min`}>
             YES
           </span>
-            <Image className="size-auto bg-transparent" src={moneyKitty} alt="cute kitty"/>
+            <Image className="size-auto bg-transparent" src={moneyKitty} alt="cute kitty" unoptimized/>
           </button>
         </div>
 
@@ -79,7 +79,7 @@ export default function Home() {
           <span className={`${comic_neue.className} ${count < 3  ? `text-xl` : `text-sm`} text-white flex`}>
             {pls[count].word}
           </span>
-          <Image className="size-full bg-transparent" src={noKitty} alt="cute kitty"/>
+          <Image className="size-full bg-transparent" src={noKitty} alt="cute kitty" unoptimized/>
         </button>
         </div>
       </div>
@@ -88,7 +88,7 @@ export default function Home() {
         <span className={`${comic_neue.className} text-lg`}>
           MADE WITH LOVE 💖
         </span>
-        <Image src={love} alt="love" className="size-8"/> 
+        <Image src={love} alt="love" className="size-8" unoptimized/> 
          <span className={`${comic_neue.className} text-lg`}>
           BY SAMIR
         </span>
