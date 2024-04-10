@@ -6,6 +6,7 @@ import cry from "../public/kitty/cry.gif"
 import cry2 from "../public/kitty/cry2.gif"
 import pws from "../public/kitty/pws.gif"
 import moneyKitty from "../public/kitty/moneyKitty.gif"
+import love from "../public/kitty/love.gif"
 import noKitty from "../public/kitty/no.gif"
 import eidMubarak from '../public/eid-mubarak.gif'
 import { useState } from "react";
@@ -16,10 +17,10 @@ import { useRouter } from "next/navigation";
 export default function Home() {
 
   const [count, setCount] = useState(0);
-  const [buttonWidth, setButtonWidth] = useState(150);
-  const [buttonHeight, setButtonHeight] = useState(75);
-  const [yesButtonHeight, setYesButtonHeight] = useState(75);
-  const [yesButtonWidth, setYesButtonWidth] = useState(150);
+  const [buttonWidth, setButtonWidth] = useState(140);
+  const [buttonHeight, setButtonHeight] = useState(60);
+  const [yesButtonHeight, setYesButtonHeight] = useState(60);
+  const [yesButtonWidth, setYesButtonWidth] = useState(140);
   
   const pls = [
     {word: "NO", img: kitty}, 
@@ -47,20 +48,21 @@ export default function Home() {
   
   return (
     <div className="flex items-center flex-col max-h-full py-6 overflow-hidden">
+      
       <div className="font-bold font-sans text-center ">
-        <Image className="size-48 lg:size-40 bg-transparent" priority src={eidMubarak} alt="cute kitty"/>
+        <Image className="size-40 lg:size-40 bg-transparent" priority src={eidMubarak} alt="cute kitty"/>
       </div>
 
       <div className="flex flex-col gap-8">
         <div>
           {/* <span>{pls[count].word}</span> */}
-          <Image className="size-48 lg:size-40 bg-transparent mt-4" src={pls[count].img} alt="cute kitty"/>
+          <Image className="size-44 lg:size-40 bg-transparent mt-4" src={pls[count].img} alt="cute kitty"/>
         </div>
         <span className={`${comic_neue.className} text-xl`}>WILL YOU GIVE ME EIDI ?</span>  
       </div>
 
 
-      <div className="btns flex gap-4 mt-10 w-full h-60 justify-center relative">
+      <div className="btns flex gap-4 mt-10 w-full h-60 lg:h-52 justify-center relative">
         <div>
 
         <button className="bg-green-600 py-2 rounded-lg text-center flex flex-col items-center h-auto" onClick={() => {router.push('/yay');}} style={{ width: `${yesButtonWidth}px`, height: `${yesButtonHeight}`}}>
@@ -74,12 +76,22 @@ export default function Home() {
         <div>
 
         <button className="bg-red-600 py-2 w-[100px] rounded-lg flex flex-col items-center" onClick={handleClick} style={{ width: `${buttonWidth}px`, height: `${buttonHeight}`}}>
-          <span className={`${comic_neue.className} text-xl text-white flex`}>
+          <span className={`${comic_neue.className} ${count < 3  ? `text-xl` : `text-sm`} text-white flex`}>
             {pls[count].word}
           </span>
           <Image className="size-full bg-transparent" src={noKitty} alt="cute kitty"/>
         </button>
         </div>
+      </div>
+
+      <div className="flex flex-row gap-1 align-middle items-center">
+        <span className={`${comic_neue.className} text-lg`}>
+          MADE WITH LOVE 💖
+        </span>
+        <Image src={love} alt="love" className="size-8"/> 
+         <span className={`${comic_neue.className} text-lg`}>
+          BY SAMIR
+        </span>
       </div>
     </div>
   );
